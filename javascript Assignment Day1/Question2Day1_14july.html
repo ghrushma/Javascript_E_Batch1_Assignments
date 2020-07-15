@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Question2Day1_14july
+        </title>
+    </head>
+    <body>
+        <h1> Write the difference between var, let and const with code examples.</h1>
+
+        <h2>var,let,const</h2>
+        <P>
+           <strong> 1. "var" declaration are globally scoped function while "let" and "const" are block scoped"</strong><br>
+
+
+            {
+                <br> var name = "Ghrushma";
+                <br>console.log(name); //this will print name in the console
+                <br>}
+            console.log(name); //this will print name in the console<br>
+             
+            {<br>
+                let value = 24 ;<br>
+                console.log(value); //this will print value in the console<br>
+            }<br>
+            //console.log(value); //this will give error.<br>
+    
+            {<br>
+                const branch = "CSE";<br>
+                console.log(branch); //this will print name in the console<br>
+            }<br>
+            //console.log(branch); //this will give error.<br>
+
+        </P>
+        <p> <strong> 2."var" variables can be updated and redeclared.</strong><br>
+            "let" variables can be updated but not redeclared.<br>
+            "const" varaibles can neither be updated nor redeclared.<br>
+       var name = "Ghrushma";<br>
+       console.log(name);<br>
+       name = "Ghrushma G" // updated<br>
+       console.log(name);<br>
+       var name = "Priya" // redeclared<br>
+       console.log(name);<br>
+
+       let value = 25;<br>
+       console.log(value);<br>
+       value = 24 //updated<br>
+       console.log(value);<br>
+       //let value = 25; This will give error.<br>
+       //console.log(value);<br>
+
+       const branch = "CSE";<br>
+      // branch = "CSE"; This will give error<br>
+      // const branch ="CSE";  This too will result in error   </p>
+
+
+      <p> <strong>3. While "var" and let can be declared without being initialized during declaration.</strong><br>
+        "const" must be initialed during declaration.
+
+        var name;<br>
+        name1 = "Ghrushma";<br>
+
+        let age_Ghrushma;<br>
+        age1_karan = 25;<br>
+
+        const branch_Ghrushma= "CSE";<br>
+        
+        /*const branch_Ghrushma;<br>
+        brach_karan = "ECE"; <br>
+        Note :- This will result in error.</p>
+
+        </body>
+        </html>
