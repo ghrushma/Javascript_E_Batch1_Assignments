@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a js code which takes input from the user and logs it in the console.</title>
+</head>
+<body>
+    <form action="" onsubmit="event.preventDefault(); sConsole();"> <!-- use inline JS to print input to console on submit -->
+        <input type="text" name="data" id="data">
+        <button type="submit">Submit</button>
+        </form>
+        <script>
+        function sConsole() {
+          var data = document.getElementById("data");
+          console.log(data.value); // data is the element, and we want its value
+        }
+        //sConsole(); This would call it only on script load, which isn't what you want
+        </script>
+</body>
+</html>

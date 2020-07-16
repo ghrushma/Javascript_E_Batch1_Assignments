@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain with examples the remaining methods of String and Array</title>
+</head>
+<body>
+    <h1>
+        Methods of String and Array
+    </h1>
+    <h1> JavaScript Array Methods</h1>
+
+    <h3>
+        JavaScript method toString()
+
+    </h3>
+    <p> The JavaScript method toString() converts an array to a string of (comma separated) array values.<br>
+         var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+        document.getElementById("demo").innerHTML = fruits.toString();</p>
+
+       <h3> The join() method</h3> 
+        
+    <p>The join() method also joins all array elements into a string.<br>
+
+        It behaves just like toString(), but in addition you can specify the separator:<br>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+        document.getElementById("demo").innerHTML = fruits.join(" * ");</p>
+        <h3>
+            Popping and Pushing
+        </h3>
+        <p>
+        When you work with arrays, it is easy to remove elements and add new elements.
+        This is what popping and pushing is:
+        Popping items out of an array, or pushing items into an array.
+        </p>
+        <h3>
+            Popping
+            The pop() method 
+
+        </h3>
+        <p>
+            The pop() method removes the last element from an array:<br>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+            fruits.pop();              // Removes the last element ("Mango") from fruits
+        </p>
+        <h3>
+            Shifting Elements
+        </h3>
+        <p>Shifting is equivalent to popping, working on the first element instead of the last.</p>
+        <h3>
+            shift() method 
+        </h3>
+        <p>
+        The shift() method removes the first array element and "shifts" all other elements to a lower index.<br>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+        fruits.shift();            // Removes the first element "Banana" from fruits
+
+        </p>
+        <h3>
+            unshift() method
+        </h3>
+        <p>
+            The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:<br>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+            fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits
+        </p>
+
+
+
+
+<h1>
+    JavaScript String Methods
+</h1>
+<h3>
+    String Length
+</h3>
+<p>
+The length property returns the length of a string:<br>
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+var sln = txt.length;
+</p>
+<h3>
+    Finding a String in a String
+    indexOf() method
+</h3>
+<p>
+    
+The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:<br>
+var str = "Please locate where 'locate' occurs!";<br>
+var pos = str.indexOf("locate");
+</p>
+<h3>
+    Searching for a String in a String
+    search() method 
+</h3>
+<p>
+   
+The search() method searches a string for a specified value and returns the position of the match:<br>
+
+var str = "Please locate where 'locate' occurs!";<br>
+var pos = str.search("locate");
+</p>
+<h3>
+    Extracting String Parts
+
+</h3>
+<p>
+    There are 3 methods for extracting a part of a string:<br>
+slice(start, end)<br>
+substring(start, end)<br>
+substr(start, length)
+</p>
+<h3>
+    The slice() Method
+</h3>
+<p>
+slice() extracts a part of a string and returns the extracted part in a new string.<br>
+
+The method takes 2 parameters: the start position, and the end position (end not included).<br>
+
+This example slices out a portion of a string from position 7 to position 12 (13-1):<br>
+var str = "Apple, Banana, Kiwi";<br>
+var res = str.slice(7, 13);
+</p>
+<h3>
+    The substring() Method
+</h3>
+<p>
+    
+    substring() is similar to slice().<br>
+    
+    The difference is that substring() cannot accept negative indexes.<br>
+    
+    var str = "Apple, Banana, Kiwi";<br>
+    var res = str.substring(7, 13);
+
+</p>
+</body>
+</html>
