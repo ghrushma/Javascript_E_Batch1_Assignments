@@ -1,0 +1,62 @@
+<!--        Question 3--Write a program to take marks as input from the user and grade him accordingly. Use Conditional
+statements. -->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Fill the marks here to find Grade</title>
+    <script type="text/javascript">
+    function calc()
+    {
+       form=document.getElementById("form1");
+       sub1=form.sub1.value;
+       sub2=form.sub2.value;
+       sub3=form.sub3.value;
+       sub4=form.sub4.value;
+       // Find the total -- TypeCast the values of the textboxes to integer.
+       total=parseInt(sub1)+parseInt(sub2)+parseInt(sub3)+parseInt(sub4);
+       form.total.value= total; // display the total into textbox.
+       form.avg.value= parseInt(total)/4; // typecast.
+       // if any one sub is <35 then result is "Fail".
+       if(sub1<25||sub2<25||sub3<25||sub4<25)
+       { form.result.value="Fail";}
+       else {form.result.value="Pass";}
+        // Grading system.
+       if(form.avg.value>70)
+        {form.grade.value="A";}
+       else if (form.avg.value>45 && form.avg.value<70)
+        {form.grade.value="B";}
+       else if (form.avg.value>40 && form.avg.value<45)
+        {form.grade.value="C";}
+       else if (form.avg.value>30 && form.avg.value<70)
+        {form.grade.value="D";}
+       else if (form.avg.value>=25 && form.avg.value<30)
+        {form.grade.value="E";}
+    }
+</script>
+</head>
+<body>
+<form id="form1">
+    student Marksheet.Fill the marks here to find.<br /><br />
+
+  <!--Enter the Name :  <input type="text" size="20" name="name"/><br /> -->
+   
+  Marks in sub1 :  <input type="text" size="20" name="sub1"/><br />
+
+  Marks in sub2 :  <input type="text" size="20" name="sub2"/><br />
+
+  Marks in sub3 :  <input type="text" size="20" name="sub3"/><br />
+
+  Marks in sub4 :  <input type="text" size="20" name="sub4"/><br />
+
+ 
+  <input type="button" name="btn" value="Calculate" onclick="calc()"/><br />
+  Total : <input type="text" size="20" name="total"/><br />
+  Average : <input type="text" size="20" name="avg"/><br />
+  Result : <input type="text" size="20" name="result"/><br /> 
+  Grade : <input type="text" size="20" name="grade"/><br />
+  <!--<input type="reset" name="Btn2" value="Reset"/> -->
+</form>
+</body>
+</html>
