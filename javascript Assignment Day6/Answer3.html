@@ -1,0 +1,88 @@
+<!--  Day 6:--Assignment No-6-- Question 3: 
+Make a webpage that will ask the name of the user. Then will display a welcome message on the webpage. Also the webpage should also have a clock. 
+Using the toggle method of classList add a dark mode feature to the website
+     Answer:--       -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Make a webpage that will ask the name of the user. Then will display a welcome message on the webpage. </title>
+
+    <style>
+        body {
+
+            padding: 25px;
+
+            background-color: papayawhip;
+
+            color: black;
+
+            font-size: 30px;
+        }
+        .dark-mode {
+
+            background-color: black;
+
+            color: white;
+
+        }
+         </style>
+         
+        </head>
+
+
+        <body>
+            
+            <button id="dark">Switch to Dark Mode</button>
+
+            <h1 id="title" align="center"></h1>
+            
+            <h4 id="time"></h4>
+            
+            <script>
+
+        var name = prompt(`Please Enter Your Name :`, `GHRUSHMA`);
+
+        title.innerText = `Welcome ${name} in letsUpgrade community  `;
+
+
+
+
+        var jstime = document.getElementById('time');
+
+
+
+        function clock() {
+
+            let date = new Date();
+
+            let time = date.toLocaleTimeString();
+
+            jstime.innerText = 'Time is :  ' + time;
+
+        }
+
+        setInterval(clock, 1000);
+
+        var dark = document.getElementById('dark');
+
+
+
+        dark.onclick = function myFunction() {
+
+            var element = document.body;
+
+            element.classList.toggle("dark-mode");
+
+        }
+        
+        </script>
+        
+         </body>
+         
+        </html>
