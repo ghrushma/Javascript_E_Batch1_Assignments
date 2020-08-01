@@ -1,0 +1,48 @@
+<!--  Q1- Write a program to make a To-Do List which has the following functions: 
+a. Add
+b. Remove
+c. Should store the data in local storage -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="syl.css">
+</head>
+
+<body>
+  <section class="todolist">
+    <header class="header">
+      <h1>To Do List</h1>
+      <input id="newTodo" class="new-todo" placeholder="
+        What to be Next? Follow Me!!">
+
+      </header>
+    <section id="main">
+      <input id="toggleInputAll" class="toggle-all" type="checkbox">
+     <label for="toggle-all">Mark all as complete</label>
+      <ul id="todoListView" class="todo-list"></ul>
+    </section>
+    <footer class="footer">
+      <span class="todo-count"><strong id="todoCount">0</strong> PENDING WORK</span>
+      <ul class="filters">
+        <li>
+          <a class="selected" id="allWorks" onclick="changeClass(this)" href="#/">ALL</a>
+        </li>
+        <li>
+          <a href="#active" id="activedItems" onclick="changeClass(this)">ACTIVE</a>
+        </li>
+        <li>
+          <a href="#completed" id="completedTodos" onclick="changeClass(this)">COMPLETED</a>
+        </li>
+      </ul>
+      <button class="clear-completed" id="btnClear">CLEAR COMPLETED</button>
+    </footer>
+  </section>
+
+  <script src="todo.js"></script>
+</body>
+
+</html>
